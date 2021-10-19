@@ -66,7 +66,4 @@ RUN apt-get update && \
     apt-get autoremove -y --purge
 RUN npm install -g express express-generator cors pug webrtc utf-8-validate@5.0.2 bufferutil@4.0.1
 
-RUN express app
-
-
 

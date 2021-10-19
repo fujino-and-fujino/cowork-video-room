@@ -5,5 +5,4 @@ RUN mkdir $APP_PATH
 WORKDIR $APP_PATH
 
 RUN npx create-react-app .
-COPY . .
-ENTRYPOINT [ "yarn", "start" ]
+#ENTRYPOINT [ "yarn", "start" ]
