@@ -3,10 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from 'react-bootstrap/Container';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <Navbar bg="light" variant="light">
+    <Container>
+    <Navbar.Brand href="#home">Cowork Video Room</Navbar.Brand>
+    <Nav className="me-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#features">Sign Up</Nav.Link>
+      <Nav.Link href="#pricing">Sign In</Nav.Link>
+    </Nav>
+    </Container>
+  </Navbar>
+  {/*
+  <Button variant="outline-primary">Enter Room</Button>
+  */}
   </React.StrictMode>,
   document.getElementById('root')
 );
