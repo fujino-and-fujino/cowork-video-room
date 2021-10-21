@@ -1,8 +1,13 @@
-import React from 'react'
+import Button from 'react-bootstrap/Button';
+import React, { useState, setState } from 'react'
+import './Meeting.css'
+import BootstrapSwitchButton from 'bootstrap-switch-button-react';
+class Meeting extends React.Component {
+  //videoRef: React.RefObject<HTMLVideoElement>;
+  //mediaStream: MediaStream;
 
-class Meeting extends React.Component{
-  videoRef: React.RefObject<HTMLVideoElement>;
-  mediaStream: MediaStream;
+  state = { isClicked: false, width: '320px' };
+
 
   constructor(props) {
     super(props);
@@ -17,23 +22,39 @@ class Meeting extends React.Component{
       this.videoRef.current.srcObject = this.mediaStream
     }
   }
-
+/*
   componentWillUnmount() {
     if (this.mediaStream) this.mediaStream.getTracks()[0].stop()
-  }
+  }*/
+
+
+
   render() {
-    return(
-    <div>
-      <p>Meeting</p>
-        <video
-          style={{ width: '320px', maxWidth: '100%'}}
-          ref={this.videoRef}
-          autoPlay
-          playsInline
-        />
-    
-    </div>
+
+    return (
+
+      < div >
+        <p> you </p>
+        <div className='video'>
+          <BootstrapSwitchButton
+            onChange={() => {
+              this.setState({ isClicked: (!this.state.isClicked), width: (this.state.isClicked ? '320px' : '0px') });
+            }}
+          />
+          <br></br>
+            <video
+              style={{ width: this.state.width, maxWidth: '100%' }}
+              ref={this.videoRef}
+              autoPlay
+              playsInline
+            />
+
+        </div>
+
+
+      </div >
     )
+
   }
 }
 

@@ -16,7 +16,7 @@ const Link = require("react-router-dom").Link;
 
 const App = () => {
   return (
-    <div>
+    <div className='field'>
       <Header></Header>
       <BrowserRouter>
         <Link to="/enter" style={{ textDecoration: 'none', color: 'black' }}>
