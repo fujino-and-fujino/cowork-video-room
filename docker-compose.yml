@@ -5,7 +5,7 @@ services:
     tty: true
     volumes:
       - ./react-app:/react-app
-    command: sh -c "cd app && yarn && yarn start"
+    command: sh -c "cd app && yarn start"
     ports:
       - "3000:3000"
     user: root
@@ -15,7 +15,7 @@ services:
     tty: true
     volumes:
       - ./express-app:/express-app
-    command: sh -c "cd app && npm install && npm start"
+    command: sh -c "cd app && npm start"
     ports:
       - "5000:5000"
     user: root
