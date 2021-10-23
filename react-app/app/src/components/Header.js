@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 
 const Header = () => (
-  <Navbar bg="light" variant="light">
+  <Navbar className="shadow" bg="light" variant="light">
     <Container>
       <Navbar.Brand href="/">Cowork Video Room</Navbar.Brand>
       <Nav className="me-auto">

@@ -2,6 +2,8 @@ import Button from 'react-bootstrap/Button';
 import React, { useState, setState } from 'react'
 import './Meeting.css'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
+
+
 class Meeting extends React.Component {
   //videoRef: React.RefObject<HTMLVideoElement>;
   //mediaStream: MediaStream;
@@ -22,10 +24,10 @@ class Meeting extends React.Component {
       this.videoRef.current.srcObject = this.mediaStream
     }
   }
-/*
-  componentWillUnmount() {
-    if (this.mediaStream) this.mediaStream.getTracks()[0].stop()
-  }*/
+  /*
+    componentWillUnmount() {
+      if (this.mediaStream) this.mediaStream.getTracks()[0].stop()
+    }*/
 
 
 
@@ -33,8 +35,8 @@ class Meeting extends React.Component {
 
     return (
 
-      < div >
-        <p> you </p>
+      <div>
+        <p>you</p>
         <div className='video'>
           <BootstrapSwitchButton
             onChange={() => {
@@ -42,19 +44,18 @@ class Meeting extends React.Component {
             }}
           />
           <br></br>
-            <video
-              style={{ width: this.state.width, maxWidth: '100%' }}
-              ref={this.videoRef}
-              autoPlay
-              playsInline
-            />
-
+          <video
+            style={{ width: this.state.width, maxWidth: '100%' }}
+            ref={this.videoRef}
+            autoPlay
+            playsInline
+          />
         </div>
-
-
       </div >
     )
 
+
+   let video = document.querySelector('.video');
   }
 }
 
