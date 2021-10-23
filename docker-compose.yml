@@ -6,7 +6,7 @@ services:
     volumes:
       - ./react-app:/react-app
       - react-app:/react-app/app/node_modules
-    command: sh -c "cd app && yarn start"
+    command: sh -c "cd app && yarn && yarn start"
     ports:
       - "3000:3000"
     user: root

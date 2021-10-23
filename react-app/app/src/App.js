@@ -1,5 +1,6 @@
 import Top from './components/pages/Top'
 import Meeting from './components/pages/Meeting'
+import Meeting2 from './components/pages/Meeting2'
 import Header from './components/Header';
 import logo from './logo.svg';
 import './App.css';
@@ -24,6 +25,7 @@ const App = () => {
         </Link>
         <Route exact path="/" component={Top} />
         <Route exact path="/enter" component={Meeting} />
+        <Route exact path="/enter2" component={Meeting2} />
       </BrowserRouter>
      
 
