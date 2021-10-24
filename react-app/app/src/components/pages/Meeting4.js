@@ -3,7 +3,7 @@ import React, { useState, setState } from 'react'
 import './Meeting.css'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 import io from 'socket.io-client';
-
+import Form from 'react-bootstrap/Form';
 
 
 class Meeting4 extends React.Component {
@@ -14,6 +14,12 @@ class Meeting4 extends React.Component {
   // remoteStream =  MediaStream
   // peerConnection =  RTCPeerConnection
   state = {
+    localWidth: '500px',
+    remoteWidth: '500px',
+    localStatus: 'Happy',
+    remoteStatus: 'Happy',
+    isLocalClicked: false,
+    isRemoteClicked: false,
     isInitiator: false,
     isStarted: false,
     isChannelReady: false,
@@ -124,7 +130,7 @@ class Meeting4 extends React.Component {
     this.receiverStart = this.receiverStart.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
     this.setLocalAndSendMessage = this.setLocalAndSendMessage.bind(this);
-
+    this.updateStatus = this.updateStatus.bind(this);
   }
 
   async componentDidMount() {
@@ -152,15 +158,75 @@ class Meeting4 extends React.Component {
   render() {
     const { isStarted, isChannelReady, isInitiator } = this.state
     return (
-      <div>
-        <h2>Sample 5</h2>
+      <div className='multi-video'>
+        {/* <h2>Sample 5</h2>
         <p>Signaling and video Peer Connection</p>
         <p>isStarted: {String(isStarted)},</p>
         <p>isChannelReady: {String(isChannelReady)}</p>
-        <p>isInitiator: {String(isInitiator)}</p>
+        <p>isInitiator: {String(isInitiator)}</p> */}
+        <br></br>
+        <br></br>
+        <br></br>
+        <div>
+          <h2>あなた</h2>
+          <h5>Now：{this.state.localStatus}</h5>
+          <div className='video'>
+            <BootstrapSwitchButton
+              onChange={() => {
+                this.setState({ isLocalClicked: (!this.state.isLocalClicked), localWidth: (this.state.isLocalClicked ? '500px' : '0px') });
+              }}
+            />
+            <br></br>
+            <video
+              style={{ width: this.state.localWidth, maxWidth: '100%' }}
+              ref={this.localVideoRef}
+              autoPlay
+              playsInline
+            />
+            <div className='form'>
+              <Form  onClick={this.updateStatus}>
+                <Form.Group>
+                  <Form.Label>自分の状態をあいてに伝えましょう</Form.Label>
+                  <Form.Control size="sm" type="text" placeholder="How are you ?" />
+                </Form.Group>
+                <Button>Update</Button>
+              </Form>
+            </div>
+          </div>
+        </div >
+
+        <br></br>
+        <br></br>
+        <br></br>
+        <div>
+          <h2>あいて</h2>
+          <h5>Now：{this.state.remoteStatus}</h5>
+          <div className='video'>
+            <BootstrapSwitchButton
+              onChange={() => {
+                this.setState({ isRemoteClicked: (!this.state.isRemoteClicked), remoteWidth: (this.state.isRemoteClicked ? '500px' : '0px') });
+              }}
+            />
+            <br></br>
+            <video
+              style={{ width: this.state.remoteWidth, maxWidth: '100%' }}
+              ref={this.remoteVideoRef}
+              autoPlay
+              playsInline
+            />
+          </div>
+        </div >
+
+        {/* <p>あなた</p>
+        <BootstrapSwitchButton
+          onChange={() => {
+            this.setState({ isClicked: (!this.state.isClicked), width: (this.state.isClicked ? '320px' : '0px') });
+          }}
+        />
+        <br></br>
         <video
           ref={this.localVideoRef}
-          style={{ width: '320px', maxWidth: '100%' }}
+          style={{ width: this.state.width, maxWidth: '100%' }}
           autoPlay
           playsInline
         />
@@ -169,7 +235,7 @@ class Meeting4 extends React.Component {
           style={{ width: '320px', maxWidth: '100%' }}
           autoPlay
           playsInline
-        />
+        /> */}
       </div>
     )
   }
@@ -239,6 +305,11 @@ class Meeting4 extends React.Component {
     this.sendMessage(description)
   }
 
+  updateStatus = () => {
+    console.log('lll')
+  }
 }
+
+  
 
 export default Meeting4;

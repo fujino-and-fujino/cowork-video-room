@@ -22,16 +22,15 @@ const App = () => {
     <div className='field'>
       <Header></Header>
       <BrowserRouter>
-        <Link to="/enter" style={{ textDecoration: 'none', color: 'black' }}>
-          <Button>Enter</Button>
-        </Link>
+          
         <Route exact path="/" component={Top} />
+        
         <Route exact path="/enter" component={Meeting} />
         <Route exact path="/enter2" component={Meeting2} />
         <Route exact path="/enter3" component={Meeting3} />
         <Route exact path="/enter4" component={Meeting4} />
       </BrowserRouter>
-     
+
 
     </div>
   );
