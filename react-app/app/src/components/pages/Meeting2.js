@@ -2,11 +2,12 @@ import Button from 'react-bootstrap/Button';
 import React, { useState, setState } from 'react'
 import './Meeting.css'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
+//import io from 'socket.io-client'
 class Meeting2 extends React.Component {
   //videoRef: React.RefObject<HTMLVideoElement>;
   //mediaStream: MediaStream;
 
-  state = { isStarted: false};
+  state = { isClicked: false, width: '320px' };
 
 
   constructor(props) {
@@ -22,7 +23,7 @@ class Meeting2 extends React.Component {
   async componentDidMount() {
     this.localStream = await navigator.mediaDevices.getUserMedia({
       video: true,
-      audio: true
+      //audio: true
     })
     if (this.localVideoRef.current) {
       this.localVideoRef.current.srcObject = this.localStream
@@ -130,26 +131,30 @@ class Meeting2 extends React.Component {
     return (
 
       < div >
-        <h2>Sample 3</h2>
-        <p>non server data channel connection.</p>
-        <textarea
-          ref={this.textareaSendRef}
-          placeholder="Press Start, enter some text, then press Send."
-          disabled={!this.isStarted}
-          disabled={!this.isStarted}
-        />
-        <textarea ref={this.textareaReceiveRef} disabled />
-        <div>
-          <button onClick={this.onClickStart} disabled={this.isStarted}>
-            Start
-          </button>
-          <button onClick={this.onClickSend} disabled={!this.isStarted}>
-            Send
-          </button>
-          <button onClick={this.onClickStop} disabled={!this.isStarted}>
-            Stop
-          </button>
+        <p> you </p>
+        <div className='video'>
+          <BootstrapSwitchButton
+            onChange={() => {
+              this.setState({ isClicked: (!this.state.isClicked), width: (this.state.isClicked ? '320px' : '0px') });
+            }}
+          />
+          <br></br>
+            <video
+              style={{ width: this.state.width, maxWidth: '100%' }}
+              ref={this.localVideoRef}
+              autoPlay
+              playsInline
+            />
+            <video
+              style={{ width: this.state.width, maxWidth: '100%' }}
+              ref={this.remoteVideoRef}
+              autoPlay
+              playsInline
+            />
+
         </div>
+
+
       </div >
     )
 
