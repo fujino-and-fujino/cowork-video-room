@@ -18,7 +18,7 @@
 「ストレスフリーなビデオチーム開発」
 の実現を目指しました。
 
-[image](https://user-images.githubusercontent.com/82075582/138822254-6e9df46a-e152-4970-bf1d-17283be056ff.png)
+![image](https://user-images.githubusercontent.com/82075582/138822254-6e9df46a-e152-4970-bf1d-17283be056ff.png)
  
 ## DEMO
  
