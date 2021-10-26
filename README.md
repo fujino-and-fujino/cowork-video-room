@@ -18,11 +18,12 @@
 「ストレスフリーなビデオチーム開発」
 の実現を目指しました。
 
-<img src="https://user-images.githubusercontent.com/82075582/138822254-6e9df46a-e152-4970-bf1d-17283be056ff.png" width="600px">
+<img src="https://user-images.githubusercontent.com/82075582/138822254-6e9df46a-e152-4970-bf1d-17283be056ff.png" width="500px">
+<img src="https://user-images.githubusercontent.com/82075582/138824271-f43c091d-f66a-4365-ad3d-0ebbdb5a645f.png" width="500px">
  
 ## DEMO
-<img src="https://user-images.githubusercontent.com/82075582/138822279-990085d0-7d3e-43aa-9d23-11b827c667cf.gif" width="600px">
-
+<img src="https://user-images.githubusercontent.com/82075582/138822279-990085d0-7d3e-43aa-9d23-11b827c667cf.gif" width="500px">
+<img src="https://user-images.githubusercontent.com/82075582/138823944-b279c01b-d428-4d2b-a0ca-07c37c417a56.gif" width="500px">
  
 ## Features
 
