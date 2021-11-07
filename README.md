@@ -1,7 +1,8 @@
 # cowork-video-room
 
 ## What is it ?
-サポーターズ主催 [技育キャンプハッカソンVol.10](https://talent.supporterz.jp/geekcamp/2021/)で開発したプログラムです。\\
+サポーターズ主催 [技育キャンプハッカソンVol.10](https://talent.supporterz.jp/geekcamp/2021/)で開発したプログラムです。
+
 ハッカソンでは、努力賞をいただきました！(https://twitter.com/geek_pjt/status/1452201731190788098?s=20)
 
 テーマは「オンラインのチーム開発を促進するアプリケーション」でした。
@@ -42,7 +43,14 @@
 
 ### OpenCV
 カメラで取得した画像の処理には、OpenCVを用いています。
-ライブラリはc++で書かれており、
+
+今回は、javascriptで動く[opencv4nodejs](https://github.com/justadudewhohacks/opencv4nodejs)を用いており、node.jsのサーバー側で動作します。
+
+![image](https://user-images.githubusercontent.com/53333096/140637402-a4449324-3871-4406-b815-e32d6bf11483.png)
+
+opencv4nodejsはインストール後、ビルドが必要なため、express側のDockerfileにその処理を記述しています。
+
+
  
 ## How to install
 
