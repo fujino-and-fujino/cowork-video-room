@@ -50,8 +50,20 @@
 
 opencv4nodejsはインストール後、ビルドが必要なため、express側のDockerfileにその処理を記述しています。
 
+#### 画像処理
+本プログラムでは、カメラ画像に対し、3つの処理を実装しました。
 
- 
+1. グレースケール
+
+![image](https://user-images.githubusercontent.com/53333096/140637487-6402b6c9-d406-48e0-bdc0-949b10f5c3cc.png)
+
+2. 顔認識
+![image](https://user-images.githubusercontent.com/53333096/140637477-0b902755-772c-4a43-855e-686dc6b98ce4.png)
+
+3. ぼかし
+![image](https://user-images.githubusercontent.com/53333096/140637492-51cd8dbd-38c4-4239-9366-2dac7ddc2e32.png)
+
+
 ## How to install
 
 ```bash
