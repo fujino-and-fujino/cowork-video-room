@@ -54,14 +54,16 @@ opencv4nodejsはインストール後、ビルドが必要なため、express側
 本プログラムでは、カメラ画像に対し、3つの処理を実装しました。
 
 1. グレースケール
-
-![image](https://user-images.githubusercontent.com/53333096/140637487-6402b6c9-d406-48e0-bdc0-949b10f5c3cc.png)
+画像を白黒にすることができます。
+![grayscale](https://user-images.githubusercontent.com/53333096/140637591-943dfbf2-b44b-4f03-8b37-d0df43000d89.gif)
 
 2. 顔認識
-![image](https://user-images.githubusercontent.com/53333096/140637477-0b902755-772c-4a43-855e-686dc6b98ce4.png)
+カメラ画像のうち、顔部分のみを検出することで、3.のようにぼかしたり、好きなキャラ画像を合成したりすることが可能です。
+![face](https://user-images.githubusercontent.com/53333096/140637594-df45521b-d1ac-43d6-8ab5-65f2148a5cab.gif)
 
 3. ぼかし
-![image](https://user-images.githubusercontent.com/53333096/140637492-51cd8dbd-38c4-4239-9366-2dac7ddc2e32.png)
+見せたくない部分などをぼかすことで、ビデオオンの精神的負担を軽減できます。
+![blur](https://user-images.githubusercontent.com/53333096/140637597-bc09963a-334c-4853-9125-4260d505a606.gif)
 
 
 ## How to install
