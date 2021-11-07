@@ -1,7 +1,7 @@
 # cowork-video-room
 
 ## What is it ?
-サポーターズ主催 [技育キャンプハッカソンVol.10](https://talent.supporterz.jp/geekcamp/2021/)で開発したプログラムです。
+サポーターズ主催 [技育キャンプハッカソンVol.10](https://talent.supporterz.jp/geekcamp/2021/)で開発したプログラムです。\\
 ハッカソンでは、努力賞をいただきました！(https://twitter.com/geek_pjt/status/1452201731190788098?s=20)
 
 テーマは「オンラインのチーム開発を促進するアプリケーション」でした。
