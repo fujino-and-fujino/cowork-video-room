@@ -46,8 +46,7 @@
 
 今回は、javascriptで動く[opencv4nodejs](https://github.com/justadudewhohacks/opencv4nodejs)を用いており、node.jsのサーバー側で動作します。
 
-![140637402-a4449324-3871-4406-b815-e32d6bf11483](https://user-images.githubusercontent.com/53333096/140637746-8a419595-ff4e-4d68-adfa-af0868378def.png)
-
+![opencv](https://user-images.githubusercontent.com/53333096/140637779-e393e468-e75b-4f22-b590-5beb0fabfa79.png)
 
 opencv4nodejsはインストール後、ビルドが必要なため、express側のDockerfileにその処理を記述しています。
 
