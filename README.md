@@ -55,7 +55,8 @@ opencv4nodejsはインストール後、ビルドが必要なため、express側
 
 1. グレースケール
 画像を白黒にすることができます。
-![gray](https://user-images.githubusercontent.com/53333096/140637750-b5dbaaa1-fe00-42d3-99bc-9474e238dece.gif)
+![gray](https://user-images.githubusercontent.com/53333096/140637791-60e7c2fb-da68-4703-8fda-b5bd69b5a5dd.gif)
+
 
 2. 顔認識
 カメラ画像のうち、顔部分のみを検出することで、3.のようにぼかしたり、好きなキャラ画像を合成したりすることが可能です。
