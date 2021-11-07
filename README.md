@@ -46,7 +46,8 @@
 
 今回は、javascriptで動く[opencv4nodejs](https://github.com/justadudewhohacks/opencv4nodejs)を用いており、node.jsのサーバー側で動作します。
 
-![image](https://user-images.githubusercontent.com/53333096/140637402-a4449324-3871-4406-b815-e32d6bf11483.png)
+![140637402-a4449324-3871-4406-b815-e32d6bf11483](https://user-images.githubusercontent.com/53333096/140637746-8a419595-ff4e-4d68-adfa-af0868378def.png)
+
 
 opencv4nodejsはインストール後、ビルドが必要なため、express側のDockerfileにその処理を記述しています。
 
@@ -55,15 +56,15 @@ opencv4nodejsはインストール後、ビルドが必要なため、express側
 
 1. グレースケール
 画像を白黒にすることができます。
-![grayscale](https://user-images.githubusercontent.com/53333096/140637591-943dfbf2-b44b-4f03-8b37-d0df43000d89.gif)
+![gray](https://user-images.githubusercontent.com/53333096/140637750-b5dbaaa1-fe00-42d3-99bc-9474e238dece.gif)
 
 2. 顔認識
 カメラ画像のうち、顔部分のみを検出することで、3.のようにぼかしたり、好きなキャラ画像を合成したりすることが可能です。
-![face](https://user-images.githubusercontent.com/53333096/140637594-df45521b-d1ac-43d6-8ab5-65f2148a5cab.gif)
+![face](https://user-images.githubusercontent.com/53333096/140637753-80d902b9-722b-47a1-8791-6350c6bcb225.gif)
 
 3. ぼかし
 見せたくない部分などをぼかすことで、ビデオオンの精神的負担を軽減できます。
-![blur](https://user-images.githubusercontent.com/53333096/140637597-bc09963a-334c-4853-9125-4260d505a606.gif)
+![blur](https://user-images.githubusercontent.com/53333096/140637757-e5fae9f3-375f-49ab-aaaa-7636566616c4.gif)
 
 
 ## How to install
